@@ -1,0 +1,12 @@
+version: '3'
+services:
+  react-app:
+    container_name: react-client
+    image: react-client
+    build: ./react-client
+    command: serve -s build
+    environment: 
+      NODE_ENV: production
+    ports:
+      - 5000:5000
+
